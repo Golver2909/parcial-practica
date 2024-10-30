@@ -1,0 +1,10 @@
+.row{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.col-lg-6{
+    justify-content: center;
+    display: flex;
+}
