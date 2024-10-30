@@ -1,4 +1,4 @@
-class Cuenta {
+export class Cuenta {
 
     #alias;
     #dinero_disponible;
@@ -61,9 +61,3 @@ class Cuenta {
     }
 }
 
-let coleccionCuentas = [];
-
-const cuenta1 = new Cuenta('laura.ocampos22',1000,'Laura Martina Ocampos');
-const cuenta2 = new Cuenta('pablomar44',500,'Pablo Daniel Martinez');
-coleccionCuentas.push(cuenta1);
-coleccionCuentas.push(cuenta2);
