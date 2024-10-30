@@ -4,18 +4,22 @@ import { Cuenta } from "./cuenta";
 let coleccionUsuarios = [];
 let coleccionCuentas = [];
 
+const boton = document.querySelector('#boton-login');
+boton.addEventListener('click',iniciarSesion)
+
 function iniciarSesion(){
     const contrasena = document.getElementById('password').value;
     const email = document.getElementById('email').value;
-    const boton = document.getElementById('boton-login');
+    
 
     const user_encontrado = coleccionUsuarios.find(
         (usuario) => usuario.contrasena === contrasena && usuario.email === email
     );
 
     if(user_encontrado){
-        boton.location.href = "";
+        boton.setAttribute('href','banco.html');
         boton.value = 'IR A SU CUENTA';
+        boton.removeEventListener('click',iniciarSesion);
         return Swal.fire({
             title: "Sesion Iniciada",
             text: "Sesion iniciada con exito",
